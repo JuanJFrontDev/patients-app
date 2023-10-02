@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
-import googleIcon from '../../assets/img/Google_Icon.png';
 import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
-// import loginImage from '../../assets/img/Login_Image.svg';
 import loginImage from '../../assets/img/Login_Image.svg';
-import { Fade } from 'react-awesome-reveal';
 import logo from '../../assets/img/Patient_Care_Logo_Editado.png';
+import googleIcon from '../../assets/img/Google_Icon.png';
 
 export const Login = () => {
+    
     const {setPage} = useContext(AuthContext);
 
     return (
