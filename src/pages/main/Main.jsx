@@ -4,14 +4,16 @@ import playStoreLogo from '../../assets/img/Google_Play_Store.svg';
 import appStoreAppleLogo from '../../assets/img/App_Store_Apple_Logo.svg';
 import socialProof from '../../assets/img/Social_Proof.png';
 import bestManagementAppImg from '../../assets/img/Best_Management_App_Image.svg';
-import {useRef} from "react";
+import {useContext, useRef} from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose, AiOutlineFieldTime } from "react-icons/ai";
 import { MdOutlineManageAccounts, MdOutlineTipsAndUpdates, MdOutlineDesignServices } from "react-icons/md";
 import { GoGoal } from "react-icons/go";
 import { BsGear } from "react-icons/bs";
-import { Zoom, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import './Main.css';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Main = () => {
 
@@ -22,6 +24,8 @@ export const Main = () => {
     console.log(navRef.current.hidden);  
   }
 
+  const {setPage} = useContext(AuthContext);
+
   return (
     <>
       <div className="container">
@@ -30,10 +34,12 @@ export const Main = () => {
         <header className="header">
           <img src={logo} alt="Logo Image" />
           <nav ref={navRef} >
-            <a className="header__nav__link" href="">First</a>
-            <a className="header__nav__link" href="">Second</a>
-            <a className="header__nav__link" href="">Third</a>
-            <a className="header__nav__link" href="">Login</a>
+            <a className="header__nav__link" href="#benefits">Benefits</a>
+            <a className="header__nav__link" href="#features">Features</a>
+            <a className="header__nav__link" href="#app">App</a>
+            <Link to="/login" className="link" onClick={() => setPage("login")}>
+              <a className="header__nav__link header__nav__login" href="">Login</a>
+            </Link>
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
               <AiOutlineClose />
             </button>
@@ -64,8 +70,8 @@ export const Main = () => {
         </main>
 
         {/* SECTION OF ALL THE ADVANTAGES - ICONS */}
-        <Fade delay={250}>
-          <section className="section__benefits">
+        <Fade delay={270}>
+          <section className="section__benefits" id="benefits">
             <p>Save time, improve management and ensure efficiency</p>
             <div>
               <AiOutlineFieldTime className="section__icons"/>
@@ -76,8 +82,8 @@ export const Main = () => {
         </Fade>
 
         {/* SECTION CARDS WITH FEATURES */}
-        <Fade delay={250}>
-          <section className="section__cards">
+        <Fade delay={270}>
+          <section className="section__cards" id="features">
             <h3>Awesome features</h3>
             <div className="section__cards__container">
               <div className="section__cards__containerCard">
@@ -111,8 +117,8 @@ export const Main = () => {
         </Fade>
 
         {/* BEST MANAGEMENT APP SECTION */}
-        <Fade delay={250}>
-          <section className="bestMobileApp">
+        <Fade delay={270}>
+          <section className="bestMobileApp" id="app">
             <div className="bestMobileApp__left" >
               <h4>Best Management <br/>App</h4>
               <p>
@@ -131,7 +137,7 @@ export const Main = () => {
           </section>
         </Fade>
 
-        <Fade delay={250}>
+        <Fade delay={270}>
           <hr />
           <footer className="footer">
             <div className="footer__left">

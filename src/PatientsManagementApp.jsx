@@ -1,10 +1,12 @@
-import React from 'react'
+import { AuthProvider } from './auth/context/AuthProvider'
+import { AppRouter } from './router/AppRouter'
 
 export const PatientsManagementApp = () => {
   return (
     <>
-        <h1 className='title'>Patients Management App</h1>
-        <button className='btn-login'>LOGIN</button>
+      <AuthProvider>
+        <AppRouter/>
+      </AuthProvider>
     </>
   )
 }

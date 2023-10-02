@@ -5,7 +5,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;    
+    font-family: 'Inter', sans-serif; 
+    /* scroll-behavior: smooth;   */
 }
 
 /* Variables */
@@ -50,6 +51,10 @@ p{
     font-weight: 400;
 }
 
+.link{
+    text-decoration: none;
+}
+
 /******************* STYLES FOR THE NAVBAR - MENU *************************/
 .header{
     align-items: center;
@@ -69,7 +74,7 @@ p{
     text-decoration: none;
 }
 
-nav a.header__nav__link:last-of-type{
+.header__nav__login{
     background-color: var(--mainColorLight);
     color: #FFFFFF;
     border-radius: 5px;
@@ -92,11 +97,19 @@ nav a.header__nav__link:last-of-type{
     font-size: 1.8rem;
 }
 
+.header__nav__login:hover{
+    background-color: var(--secondaryColor);
+    transition: 0.35s ease;
+    color: #FFF;
+    /* color: yellow; */
+    /* padding: 50px; */
+}
+
 /************************ MAIN SECTION: Title, Subtitle, Main Image ****************************/
 .main{
     display: flex;
     justify-content: space-evenly;
-    padding: 5px 1em;
+    padding: 3px 1em;
     width: min(1700px,100%);
     background: rgb(246,246,246);
     background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(246,246,246,1) 0%);
@@ -105,7 +118,7 @@ nav a.header__nav__link:last-of-type{
 .main__left{
     width: min(730px,95%);
     padding-left: 21px;
-    padding-top: 35px;
+    padding-top: 25px;
 }
 
 .main__left__parragraph{
