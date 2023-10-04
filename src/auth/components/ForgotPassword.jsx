@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import { Fade } from "react-awesome-reveal";
 import forgotPassword from '../../assets/img/Forgot_Password.svg';
 import "./ForgotPassword.css";
 
@@ -9,7 +10,7 @@ export const ForgotPassword = () => {
   const {setPage} = useContext(AuthContext);
 
   return (
-    <>
+    <Fade delay={50}>
       <div className="forgotPassword__container">
         <div className="forgotPassword__left">
           <div className="forgotPassword__card">
@@ -26,6 +27,6 @@ export const ForgotPassword = () => {
           <img src={forgotPassword} alt="Create Account" />
         </div>
       </div>
-    </>
+    </Fade>
   )
 }

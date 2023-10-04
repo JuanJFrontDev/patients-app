@@ -1,9 +1,3 @@
-import mainImage from '../../assets/img/Main_Image.svg';
-import logo from '../../assets/img/Patient_Care_Logo.png';
-import playStoreLogo from '../../assets/img/Google_Play_Store.svg';
-import appStoreAppleLogo from '../../assets/img/App_Store_Apple_Logo.svg';
-import socialProof from '../../assets/img/Social_Proof.png';
-import bestManagementAppImg from '../../assets/img/Best_Management_App_Image.svg';
 import {useContext, useRef} from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose, AiOutlineFieldTime } from "react-icons/ai";
@@ -11,9 +5,16 @@ import { MdOutlineManageAccounts, MdOutlineTipsAndUpdates, MdOutlineDesignServic
 import { GoGoal } from "react-icons/go";
 import { BsGear } from "react-icons/bs";
 import { Fade } from "react-awesome-reveal";
-import './Main.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
+import mainImage from '../../assets/img/Main_Image.svg';
+import logo from '../../assets/img/Patient_Care_Logo.png';
+import playStoreLogo from '../../assets/img/Google_Play_Store.svg';
+import appStoreAppleLogo from '../../assets/img/App_Store_Apple_Logo.svg';
+import socialProof from '../../assets/img/Social_Proof.png';
+import bestManagementAppImg from '../../assets/img/Best_Management_App_Image.svg';
+import './Main.css';
+
 
 export const Main = () => {
 

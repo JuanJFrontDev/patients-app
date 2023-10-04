@@ -10,7 +10,6 @@
 
 button:hover{
     cursor: pointer;
-    padding: 50px;
 }
 
 /************** FINAL STYLE ******************/
@@ -182,6 +181,7 @@ button:hover{
         width: 100%;
         color: #FFF;
     }
+    
     .loginPage__left__container{
         border: 5px solid #FFF;
         width: 90%;
@@ -191,6 +191,7 @@ button:hover{
     .loginPage__left__container h1{
         color: #FFF;
         padding-top: 20px;
+        font-size: 3rem;
     }
 
     .loginPage__left__container p{
@@ -211,10 +212,31 @@ button:hover{
     .loginPage__left__container button:first-of-type{
         background-color: #FFF;
         color: #1e2d4b;
+        font-weight: 700;
+        font-size: .9rem;
+        letter-spacing: 1px;
     }
 
-    .loginLink{
+    .loginPage__leftThird p{
+        color: #1e2d4b;
+        padding:0;
+        margin-top: 9px;
+        margin-right: 45px;
+        font-weight: 700;
+        font-size: .9rem;
+    }
+
+    .loginPage__leftFirst .loginLink{
         text-decoration: none;
-        color: #b3aeae;
+        font-weight: 600;
+        color: #bdb8b8;
+        font-size: .95rem;
+    }
+
+    .loginPage__leftSecond .loginLink{
+        text-decoration: none;
+        font-weight: 600;
+        color: #bdb8b8;
+        font-size: .95rem;
     }
 }
